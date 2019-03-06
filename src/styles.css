@@ -1,0 +1,336 @@
+body {
+  font-family: sans-serif;
+}
+
+#app {
+  width: 600px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 0.9em;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: rgba(0,0,0,0.7);
+  animation: slide-from-top 2s ease-out forwards;
+  /* animation: slide-from-left 1s ease forwards; */
+  /* animation-name: fadein2;
+  animation-duration: 8s;
+  animation-timing-function: ease-in; */
+}
+
+header {
+  height: 229px;
+}
+
+.social {
+  margin: 0.47em;
+  animation: slide-from-top 2s ease-out forwards;
+  /* animation-name: fadein2;
+  animation-duration: 8s;
+  animation-timing-function: ease-in; */
+}
+
+.social a {
+  text-decoration: none;
+}
+
+.social svg {
+  padding-right: 12px;
+  color: rgba(0,0,0,0.4);
+}
+
+.social svg:hover {
+  color: rgba(0,0,0,0.7);
+}
+
+.profile {
+  width: 200px;
+  height: 200px;
+  opacity: 0.8;
+  float: left;
+  background-image: url("profileHighContrast.jpeg");
+  background-size: cover;
+  animation-name: fadein_profile;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  /* animation: slide-from-top 1s ease-out forwards; */
+}
+
+#projects-title {
+  justify-self: self-end;
+}
+
+h1 { grid-area: name; }
+.social { grid-area: social; }
+.profile { grid-area: profile; }
+.blurb { grid-area: blurb; }
+.projects { grid-area: projects; }
+#projects-title { grid-area: projects-title; }
+
+.toptrack {
+  margin-top: 30px;
+  height: 11px;
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr 1fr;
+  grid-template-areas: 
+    '. name social .'
+}
+
+.track2 {
+  height: 188px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr 1fr;
+  grid-template-areas: 
+    '. profile blurb .'
+}
+
+.track3 {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-template-areas: 
+    'projects-title projects'
+}
+
+.track2 .profile {
+  align-self: start;
+}
+
+.track2 .blurb {
+  padding: 50px;
+  align-self: center;
+  justify-self: center;
+  font-size: 1em;
+  font-weight: 100;
+  color: rgba(0,0,0,0.7);
+  letter-spacing: 1px;
+  animation: fadein_text 1s ease;
+}
+
+.track2 .blurb .line1 {
+  font-size: 1.4em;
+}
+
+.test {
+  background-color: red;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+svg.script {
+  /* border: 6px solid rgba(0, 0, 255, 0.5); */
+  width: 600px;
+  height: 1200px;
+}
+.image {
+  object-fit: cover;
+  position: absolute;
+  top: 58px;
+  left: 58px;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  opacity: 1;
+  animation-name: fadein;
+  animation-duration: 20s;
+}
+.image:hover {
+  -webkit-filter: grayscale(30%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(30%);
+  opacity: 1;
+}
+.rect {
+  animation-name: fadein2;
+  animation-duration: 4s;
+  fill: rgba(0, 0, 0, 0.1);
+}
+
+.project-focus text.text_title {
+  letter-spacing: 3px;
+}
+
+.project-focus rect.rect {
+  fill: rgba(0,0,0,0.8);
+}
+
+.project-rect {
+  fill-opacity: 0;
+}
+
+.text_title {
+  font-size: 0.7em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  animation-name: fadein_text;
+  animation-duration: 4s;
+  animation-timing-function: ease;
+  /* animation-delay: 4s; */
+  opacity: 0.7;
+}
+
+.text_caption {
+  font-size: 0.7em;
+  letter-spacing: 1px;
+  animation-name: fadein_text;
+  animation-duration: 4s;
+  animation-timing-function: ease;
+  opacity: 0.7;
+  font-weight: 200;
+}
+
+.text_tools {
+  font-size: 0.6em;
+  letter-spacing: 1px;
+  animation-name: fadein_text;
+  animation-duration: 4s;
+  animation-timing-function: ease;
+  opacity: 0.6;
+  font-weight: bold;
+}
+
+.text_section_title {
+  font-size: 0.8em;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  animation-name: fadein_title;
+  animation-duration: 6s;
+  animation-timing-function: ease-in;
+  /* animation-delay: 4s; */
+  opacity: 0.3;
+}
+
+
+
+.v-line {
+  stroke-dasharray: 150;
+  stroke-dashoffset: 150;
+  animation: offset 1s linear forwards;
+  stroke: rgba(0, 0, 0, 0.2);
+  stroke-width: 0.5;
+}
+.h-line {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: offset 1s linear forwards;
+  stroke: rgba(0, 0, 0, 0.2);
+  stroke-width: 0.5;
+}
+.header-line {
+  /* stroke-dasharray: 1100;
+  stroke-dashoffset: 1100; */
+  animation: offset 2s ease forwards;
+  stroke: rgba(0, 0, 0, 0.2);
+  stroke-width: 1;
+}
+
+.section-line {
+  /* stroke-dasharray: 1000;
+  stroke-dashoffset: 1000; */
+  animation: offset 2s ease forwards;
+  animation-delay: 2s;
+  stroke: rgba(0, 0, 0, 0.2);
+  stroke-width: 1;
+}
+
+.corner {
+  stroke-dasharray: 20;
+  stroke-dashoffset: 20;
+  animation: offset 1s linear forwards;
+  animation-delay: 1s;
+  stroke: rgba(0, 0, 0, 0.6);
+  stroke-width: 3;
+}
+
+
+@keyframes slide-from-top {
+  from {
+    position: absolute;
+    top: -500px;
+    opacity: 0;
+  }
+  to {
+    position: relative;
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes slide-from-left {
+  from {
+    position: absolute;
+    left: -500px;
+    opacity: 0;
+  }
+  to {
+    position: relative;
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes slide-from-right {
+  from {
+    position: absolute;
+    left: 4160px;
+    opacity: 0;
+  }
+  to {
+    position: relative;
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein_profile {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.8;
+  }
+}
+
+@keyframes fadein_text {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.7;
+  }
+}
+
+@keyframes fadein2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.8;
+  }
+}
+
+@keyframes fadein_title {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.3;
+  }
+}
+
+@keyframes offset {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
