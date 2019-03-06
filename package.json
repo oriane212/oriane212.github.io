@@ -2,9 +2,9 @@
   "name": "intersecting-lines",
   "version": "1.0.0",
   "description": "Animated lines intersect to form rectangles using inline SVG",
-  "main": "index.html",
+  "main": "start.html",
   "scripts": {
-    "start": "parcel index.html --open",
+    "start": "parcel start.html --open",
     "build": "parcel build index.html"
   },
   "dependencies": {},
